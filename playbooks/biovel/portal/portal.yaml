@@ -64,7 +64,7 @@
       notify: restart portal
 
     - name: install Ruby dependencies using bundle
-      command: bundle install chdir={{portal_install}}
+      command: bundle install --deployment chdir={{portal_install}}
 
     - name: configure portal database connections
       sudo_user: www-data
